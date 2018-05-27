@@ -9,7 +9,7 @@ public class Dimension {
     private final String[] size;
 
     public Dimension(String line) {
-
+ 
         final Flags processed = new Flags(line);
         final boolean h = processed.getH();
         final boolean c = processed.getC();
