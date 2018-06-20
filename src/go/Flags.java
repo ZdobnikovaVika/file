@@ -11,44 +11,34 @@ public class Flags {
         h = false;
         c = false;
         si = false;
-        str = "oo [df] [kjjj] dfgdfg";
         final String[] comands = str.split("[ ]");
         final int length = comands.length;
 
-        if (length < 2) {
+        if (length < 2 || !comands[0].equals("du")) {
             throw new IllegalArgumentException();
         }
         int index = 0;
         boolean k = false;
 
         while (!k) {
+            index++;
             if (index == length) {
                 throw new IllegalArgumentException();
             }
 
             switch (comands[index]) {
-                case "-h":
-                    if (h) {
-                        throw new IllegalArgumentException();
-                    }
+                case "[-h]":
                     h = true;
                     break;
-                case "-c":
-                    if (c) {
-                        throw new IllegalArgumentException();
-                    }
+                case "[-c]":
                     c = true;
                     break;
-                case "--si":
-                    if (si) {
-                        throw new IllegalArgumentException();
-                    }
+                case "[--si]":
                     si = true;
                     break;
                 default:
                     k = true;
             }
-            index++;
         }
 
         final int lengthWay = length - index;
