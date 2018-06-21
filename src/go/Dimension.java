@@ -1,7 +1,5 @@
 package go;
 
-import java.io.File;
-
 
 public class Dimension {
 
@@ -16,10 +14,8 @@ public class Dimension {
         final boolean si = processed.getSi();
         way = processed.getway();
 
-        final ProcessingSize receiveSize = new ProcessingSize(c, way);
-        final ProcessingFlags treatedSize = new ProcessingFlags(h, si, receiveSize.getSize());
-
-        size = treatedSize.getSize();
+        final ProcessingSize receiveSize = new ProcessingSize(c, h, si, way);
+        size = receiveSize.getSize();
     }
 
     public String[] getSize() {

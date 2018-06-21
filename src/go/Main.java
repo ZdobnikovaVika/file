@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Main {
 
-    // Метод для работы с консолью
     public static void main(String[] args) {
         try {
             final Scanner in = new Scanner(System.in);

@@ -1,11 +1,11 @@
 import go.Dimension;
-import go.Flags;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 
 
 public class test {
+
     @Test
     public void Flag1() {
         assertArrayEquals(
@@ -20,7 +20,9 @@ public class test {
                 new String[]{"2,14"},
                 new Dimension("du [--si] textss").getSize());
 
+
     }
+
 
     @Test
     public void Flag3() {
@@ -64,6 +66,7 @@ public class test {
         }
 
     }
+
     @Test
     public void errorNotText() {
         try {
@@ -74,6 +77,7 @@ public class test {
         }
 
     }
+
     @Test
     public void errorNotFile() {
         try {
