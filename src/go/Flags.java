@@ -45,7 +45,6 @@ public class Flags {
 
         if (c) {
             way = new String[lengthWay + 1];
-            way[lengthWay] = "Total size";
         } else {
             way = new String[lengthWay];
         }

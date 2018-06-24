@@ -41,7 +41,7 @@ class ProcessingSize {
         } else {
             base = 1024;
         }
-        
+
             sizes = new String[length];
         if (h) {
             final String[] b = new String[]{"B", "KB", "MB", "GB", "TB"};
